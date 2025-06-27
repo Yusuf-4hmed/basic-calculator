@@ -1,9 +1,10 @@
 html, body {
     margin: 0px;
+    font-family: arial;
 }
 
 .calculator-body {
-    background-color: gainsboro;
+    background-color: white;
     width: 99vw;
     height: 99vh;
     padding: 10px;
@@ -15,8 +16,8 @@ html, body {
 .calculator-screen {
     width: 100;
     height: 130px;
-    border-radius: 15px;
-    border: none;
+    border-radius: 23px;
+    border: 1px solid rgb(197, 196, 196);
     font-size: 70px;
     padding: 30px;
     text-align: right;
@@ -27,7 +28,7 @@ html, body {
 .calculator-buttons {
     display: flex;
     width: auto;
-    gap: 5px;
+    gap: 20px;
 }
 
 button {
@@ -36,6 +37,7 @@ button {
     border: none;
     background-color: white;
     font-size: 30px;
+    cursor: pointer;
 }
 
 .numbers {
@@ -46,8 +48,50 @@ button {
     gap: 10px;
 }
 
+.numbers button {
+    background-color: rgb(238, 238, 238);
+}
+
+.numbers button:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+.numbers button:first-child {
+    background-color: rgb(202, 228, 251);
+}
+
+.numbers button:nth-child(2) {
+    cursor: default;
+    background-color: rgba(245, 243, 243, 0.661);
+}
+.numbers button:nth-child(2):hover {
+    background-color: rgba(245, 243, 243, 0.661);
+}
+.numbers button:nth-child(3) {
+    cursor: default;
+    background-color: rgba(245, 243, 243, 0.661);
+}
+.numbers button:nth-child(3):hover {
+    background-color: rgba(245, 243, 243, 0.661);
+}
+.numbers button:nth-child(13) {
+    cursor: default;
+    background-color: rgba(245, 243, 243, 0.661);
+}
+.numbers button:nth-child(13):hover {
+    background-color: rgba(245, 243, 243, 0.661);
+}
+
 .operators {
     width: 40%;
     display: grid;
     gap: 10px;
+}
+
+.operators button {
+    background-color: rgb(202, 228, 251);
+}
+
+.operators button:hover {
+    background-color: rgb(176, 217, 254);
 }
