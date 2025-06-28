@@ -22,78 +22,40 @@ const equalsButton = document.getElementById("equals-button");
 
 let screenArray = [];
 
-oneButton.addEventListener("click", () => {
-    screenArray.push(1);
+const addToScreen = (value) => {
+    screenArray.push(value);
+    updateScreen();
+}
+const updateScreen = () => {
     screenText.innerText = screenArray.join('');
-})
-twoButton.addEventListener("click", () => {
-    screenArray.push(2);
-    screenText.innerText = screenArray.join('');
-})
-threeButton.addEventListener("click", () => {
-    screenArray.push(3);
-    screenText.innerText = screenArray.join('');
-})
-fourButton.addEventListener("click", () => {
-    screenArray.push(4);
-    screenText.innerText = screenArray.join('');
-})
-fiveButton.addEventListener("click", () => {
-    screenArray.push(5);
-    screenText.innerText = screenArray.join('');
-})
-sixButton.addEventListener("click", () => {
-    screenArray.push(6);
-    screenText.innerText = screenArray.join('');
-})
-sevenButton.addEventListener("click", () => {
-    screenArray.push(7);
-    screenText.innerText = screenArray.join('');
-})
-eightButton.addEventListener("click", () => {
-    screenArray.push(8);
-    screenText.innerText = screenArray.join('');
-})
-nineButton.addEventListener("click", () => {
-    screenArray.push(9);
-    screenText.innerText = screenArray.join('');
-})
-zeroButton.addEventListener("click", () => {
-    screenArray.push(0);
-    screenText.innerText = screenArray.join('');
-})
-decimalButton.addEventListener("click", () => {
-    screenArray.push(".");
-    screenText.innerText = screenArray.join('');
-})
+}
+const calculate = () => {
+    screenText.innerText = eval(screenText.innerText)
+}
+const remove = () => {
+    screenArray.pop();
+    screenText.innerText = screenArray.join('')
+}
 
-divideButton.addEventListener("click", () => {
-    screenArray.push("/");
-    screenText.innerText = screenArray.join('');
-})
-multiplyButton.addEventListener("click", () => {
-    screenArray.push("*");
-    screenText.innerText = screenArray.join('');
-})
-subtractButton.addEventListener("click", () => {
-    screenArray.push("-");
-    screenText.innerText = screenArray.join('');
-})
-addButton.addEventListener("click", () => {
-    screenArray.push("+");
-    screenText.innerText = screenArray.join('');
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', () => {
+        addToScreen(button.dataset.value);
+    })
 })
 
 equalsButton.addEventListener("click", () => {
-    screenText.innerText = eval(screenText.innerText);
-    screenArray = [];
-    screenArray.push(screenText.innerText) 
+    calculate()
+})
 
-})
 backButton.addEventListener("click", () => {
-    screenArray.pop()
-    screenText.innerText = screenArray.join('')
+    remove()
 })
+
+// })
+// backButton.addEventListener("click", () => {
+//     screenArray.pop()
+//     screenText.innerText = screenArray.join('')
+// })
 
 document.addEventListener("keydown", (e) => {
     if (e.key === "1") {
