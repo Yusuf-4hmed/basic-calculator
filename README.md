@@ -44,14 +44,13 @@ This project was created to refresh core front-end skills including DOM manipula
 
 ## Run Locally
 
-    1. Clone the repo:
-    ```git 
-    clone https://github.com/Yusuf-4hmed/clean-calculator.git```
+1. Clone the repo:
+    `git clone https://github.com/Yusuf-4hmed/clean-calculator.git`
 
-    2. Open the folder:
-    ```cd clean-calculator```
+2. Open the folder:
+    `cd clean-calculator`
 
-    3. Open `index.html` in your browser or via VS Code Live Server.
+3. Open `index.html` in your browser or via VS Code Live Server.
 
 
 
